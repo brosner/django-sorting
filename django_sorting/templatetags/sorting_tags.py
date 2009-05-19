@@ -23,6 +23,7 @@ def anchor(parser, token):
     """
     Parses a tag that's supposed to be in this format:
     {% anchor field title anchor_class anchor_rel %}
+    where the 'title', 'anchor_class' and 'anchor_rel' arguments are optional.
     """
     bits = [b.strip('"\'') for b in token.split_contents()]
     if len(bits) < 2:
